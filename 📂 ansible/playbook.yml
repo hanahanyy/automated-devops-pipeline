@@ -1,0 +1,11 @@
+---
+- name: Setup Local DevOps Env
+  hosts: localhost
+  connection: local
+
+  tasks:
+    - name: Install Docker
+      become: true
+      apt:
+        name: docker.io
+        state: present
